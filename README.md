@@ -1,5 +1,12 @@
-## Docker
+## What is Docker
 
+## what is a container?
+
+## What is a container image?
+
+## Containerisation vs Virtualisation
+
+## Docker commands
 
 
 `docker run -d -p 80:80 nginx`
@@ -20,4 +27,6 @@ Navigate `cd /usr/share/nginx/html`
 `apt-get update -y`
 `apt-get install nano`
 
+
+## How to push to docker?
 
