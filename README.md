@@ -43,7 +43,10 @@ https://www.ibm.com/cloud/blog/containers-vs-vms
 `docker ps -a` 
 
 `docker start `
+
 `docker stop `
+
+`docker rm containerID -f`
 
 To get inside container run this command
 `docker exec -it containerID bash` 
