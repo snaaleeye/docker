@@ -21,4 +21,3 @@ Navigate `cd /usr/share/nginx/html`
 `apt-get install nano`
 
 
-![sharmarke](https://user-images.githubusercontent.com/105854053/177189821-5f0b5022-8283-45d8-bf80-43c20fd9d603.jpeg)
