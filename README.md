@@ -156,7 +156,7 @@ services:
     volumes:
       - ~/mongo:/data/db
     ports:
-      - "98:27017"
+      - "27017:27017"
     
   app:
     container_name: app_docker_compose
@@ -165,7 +165,7 @@ services:
     environment:
       - DB_HOST=mongodb://db:27017/posts
     ports:
-      - "3000:3000"
+      - "80:3000"
     links:
       - db
 ```
