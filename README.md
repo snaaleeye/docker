@@ -52,6 +52,8 @@ To get inside container run this command
 if this does not work run this command then repeat
 `alias docker="winpty docker"`
 
+`docker cp index.html containerid:/usr/share/nginx/html`
+
 Navigate `cd /usr/share/nginx/html`
 
 `apt-get update -y`
