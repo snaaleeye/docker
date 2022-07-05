@@ -77,16 +77,15 @@ Navigate `cd /usr/share/nginx/html`
 
 ```
 FROM node:16
+ENV NODE_ENV=production
 
-WORKDIR /usr/src/app/
+LABEL MAINTAINER=snaaleeye@spartaglobal.com
 
-COPY package*.json ./
-
-COPY . .
+WORKDIR /app
+COPY /app .
+RUN npm install -g npm@latest
 
 EXPOSE 3000
-
-RUN npm install -g npm@latest
 
 CMD ["node", "app.js"]
 
