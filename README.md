@@ -71,3 +71,23 @@ Navigate `cd /usr/share/nginx/html`
 `docker commit id username/reponame`
 
 `docker push username/reponame`
+
+
+## Run app using Docker
+
+```
+FROM node:16
+
+WORKDIR /usr/src/app/app/app
+
+COPY package*.json ./
+
+COPY . .
+
+EXPOSE 3000
+
+RUN npm install -g npm@latest
+
+CMD ["node", "app.js"]
+
+```
