@@ -78,15 +78,16 @@ Navigate `cd /usr/share/nginx/html`
 ```
 FROM node:16
 
-LABEL MAINTAINER=snaaleeye@spartaglobal.com
-
 WORKDIR /usr/src/app
-COPY /app .
 
 COPY package*.json ./
-RUN npm install
+
+RUN npm install -g npm@7.20.6
+
+COPY . .
 
 EXPOSE 3000
+
 CMD ["node", "app.js"]
 
 ```
