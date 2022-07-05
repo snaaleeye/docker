@@ -66,4 +66,4 @@ Navigate `cd /usr/share/nginx/html`
 
 `docker commit id username/reponame`
 
-`docker push usrname/reponame`
+`docker push username/reponame`
