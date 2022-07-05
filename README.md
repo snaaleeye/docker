@@ -128,3 +128,88 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 
 ```
+
+## Apply microservices to the Node app and Mongodb
+
+Step 1 - Create a dockerfile in the app folder
+
+``` 
+FROM node AS app
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm install -g npm@7.20.6
+RUN npm install express
+
+EXPOSE 3000
+
+CMD [ "node", "seeds/seed.js"]
+
+CMD ["node", "app.js"]
+
+# Production ready image
+
+FROM node:alpine
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm install -g npm@7.20.6
+RUN npm install express
+
+COPY --from=app /usr/src/app /usr/src/app/
+
+EXPOSE 3000
+
+CMD [ "node", "seeds/seed.js"]
+
+CMD ["node", "app.js"]
+
+```
+
+Step 2 - Create a new directory db with mongod.conf file and Dockerfile
+
+```
+FROM mongo
+
+COPY . .
+
+RUN   sed -i "s|bindIp: 127.0.0.1|bindIp: 0.0.0.0|g" /etc/mongod.conf.orig
+
+EXPOSE 27017
+```
+
+Step 3 - Run app dockerfile and db dockerfile
+
+
+
+Step 4 - Create a docker-compose.yml file 
+
+```
+version: "3"
+services:
+  db:
+    container_name: db_docker_compose
+    image: mongo
+    restart: always
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "98:27017"
+    
+  app:
+    container_name: app_docker_compose
+    build: ./app
+    restart: always
+    environment:
+      - DB_HOST=mongodb://db:27017/posts
+    ports:
+      - "3000:3000"
+    links:
+      - db
+```
+
+
