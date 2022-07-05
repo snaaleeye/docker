@@ -38,7 +38,7 @@ https://www.ibm.com/cloud/blog/containers-vs-vms
 
 `docker images` - shows a list of images
 
-`docker run -d -p 80:80 nginx` 
+`docker run -d -p 80:80 eng114sharmake/sharmarkenginx` 
 
 `docker ps -a` 
 
