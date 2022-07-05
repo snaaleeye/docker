@@ -184,6 +184,7 @@ EXPOSE 27017
 
 Step 3 - Run app dockerfile and db dockerfile
 
+`docker build -t eng114sharmake/app .`
 
 
 Step 4 - Create a docker-compose.yml file 
