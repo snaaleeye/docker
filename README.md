@@ -46,6 +46,8 @@ https://www.ibm.com/cloud/blog/containers-vs-vms
 
 `docker rm containerID -f`
 
+`docker rmi imageID`
+
 To get inside container run this command
 `docker exec -it containerID bash` 
 
