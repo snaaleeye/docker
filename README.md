@@ -97,6 +97,21 @@ https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 ## Production ready APP
 ```
 
+FROM node AS app
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm install -g npm@7.20.6
+RUN npm install express
+
+EXPOSE 3000
+
+CMD ["node", "app.js"]
+
+# Production ready image
+
 FROM node:alpine
 
 WORKDIR /usr/src/app
@@ -112,3 +127,4 @@ EXPOSE 3000
 
 CMD ["node", "app.js"]
 
+```
