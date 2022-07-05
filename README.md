@@ -77,13 +77,12 @@ Navigate `cd /usr/share/nginx/html`
 
 ```
 FROM node:16
-ENV NODE_ENV=production
 
 LABEL MAINTAINER=snaaleeye@spartaglobal.com
 
 WORKDIR /app
 COPY /app .
-RUN npm install -g npm@latest
+RUN npm install
 
 EXPOSE 3000
 
