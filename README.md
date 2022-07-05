@@ -78,7 +78,7 @@ Navigate `cd /usr/share/nginx/html`
 ```
 FROM node:16
 
-WORKDIR /usr/src/app/app/app
+WORKDIR /usr/src/app/
 
 COPY package*.json ./
 
