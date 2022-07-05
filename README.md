@@ -131,7 +131,6 @@ CMD ["node", "app.js"]
 
 ## Apply microservices to the Node app and Mongodb
 
-```
 
 Create a new directory db with mongod.conf file and Dockerfile
 
@@ -145,6 +144,7 @@ RUN   sed -i "s|bindIp: 127.0.0.1|bindIp: 0.0.0.0|g" /etc/mongod.conf.orig
 EXPOSE 27017
 ```
 
+Create a docker-compose.yml file
 
 ```
 version: "3"
