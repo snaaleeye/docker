@@ -32,8 +32,6 @@ Just like virtual machines, containers allow developers to improve CPU and memor
 https://www.ibm.com/cloud/blog/containers-vs-vms
 
 
-![vm_vs_docker](https://user-images.githubusercontent.com/105854053/177197095-de7e04af-7597-4ce6-8809-042e504d58b6.png)
-
 ## Docker commands
 
 `docker images` - shows a list of images
