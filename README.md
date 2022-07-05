@@ -61,6 +61,8 @@ Navigate `cd /usr/share/nginx/html`
 `apt-get update -y`
 `apt-get install nano`
 
+`docker build -t eng114sharmake/eng114_nginx:v1 .`
+
 
 ## How to push to docker?
 
