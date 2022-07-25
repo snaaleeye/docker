@@ -2,6 +2,7 @@
 
 <img width="655" alt="Screenshot 2022-07-04 at 12 03 02" src="https://user-images.githubusercontent.com/105854053/177196979-b961b600-cdf7-4cfd-a0f6-40e48fea44e4.png">
 
+Docker is a platform or ecosystem around creating and running containers. 
 
 Docker is an open source platform that enables developers to build, deploy, run, update and manage containers—standardized, executable components that combine application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.
 
@@ -11,11 +12,20 @@ Docker also refers to Docker, Inc. (link resides outside ibm.com), the company t
 
 https://www.ibm.com/cloud/learn/docker
 
+## Why use Docker?
+
+Docker makes it really easy to install and run software without worrying about setup or dependencies. 
+
+
 ## What is a container?
+
+Container is an instance of an image. Runs a programme. 
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
 ## What is a container image?
+
+Image is a single file with all the dependencies and config required to run a programme. 
 
 Container images become containers at runtime and in the case of Docker containers – images become containers when they run on Docker Engine. Available for both Linux and Windows-based applications, containerized software will always run the same, regardless of the infrastructure. Containers isolate software from its environment and ensure that it works uniformly despite differences for instance between development and staging.
 
@@ -169,5 +179,4 @@ services:
     links:
       - db
 ```
-
 
