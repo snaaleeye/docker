@@ -23,6 +23,10 @@ Container is an instance of an image. Runs a programme.
 
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
+Namespacing - isolating resources per process (or group of processes)
+
+Control groups (cgroups) - limit amount of resources used per process. 
+
 ## What is a container image?
 
 Image is a single file with all the dependencies and config required to run a programme. 
