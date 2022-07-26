@@ -45,7 +45,6 @@ Just like virtual machines, containers allow developers to improve CPU and memor
 
 https://www.ibm.com/cloud/blog/containers-vs-vms
 
-
 ## Docker commands
 
 `docker images` - shows a list of images
@@ -64,6 +63,8 @@ https://www.ibm.com/cloud/blog/containers-vs-vms
 
 Execute an additional command in a container
 `docker exec -it containerID bash` 
+`docker exec -it containerID sh`
+
 
 if this does not work run this command then repeat
 `alias docker="winpty docker"`
