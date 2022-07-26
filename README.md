@@ -62,7 +62,7 @@ https://www.ibm.com/cloud/blog/containers-vs-vms
 
 `docker rmi imageID`
 
-To get inside container run this command
+Execute an additional command in a container
 `docker exec -it containerID bash` 
 
 if this does not work run this command then repeat
